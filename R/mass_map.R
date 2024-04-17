@@ -30,7 +30,7 @@ us_map = function(provider="CartoDB.Positron")
 #' mass_cancer_map()
 #' @export
 mass_cancer_map = function(site = "breast") {
- data("us_county_geo", package="YESCDS")
+ data("us_county_geo", package="vjcwebr")
  rate.tab = MA_cancer_rate_table(site=site)
  lj = dplyr::left_join(mutate(rate.tab, county=County),   # mutate: obtain new variable name
                 dplyr::filter(us_county_geo, state=="MA"), by="county") # merge rates and geography
