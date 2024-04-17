@@ -13,7 +13,7 @@ Description: demonstrate use of webr
 License: Artistic-2.0
 Encoding: UTF-8
 Depends: R (>= 4.1)
-Suggests: knitr, testthat, BiocStyle
+Suggests: knitr
 VignetteBuilder: knitr
 biocViews: Infrastructure
 RoxygenNote: 7.2.3
