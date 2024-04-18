@@ -1,0 +1,39 @@
+---
+title: "YESCDS"
+repo-url: https://github.com/vjcitn/vjcwebr
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-expand: 3
+    toc-title: Sections
+    code-fold: true
+    code-links:
+      - text: Quarto (source code)
+        icon: github
+        href: https://github.com/vjcwebr/
+engine: knitr
+knitr:
+  opts_chunk:
+    collapse: true
+execute:
+  warning: false
+filters:
+  - webr
+webr:
+  repos: ['https://repo.r-wasm.org', 'https://vjcitn.github.io/vjcwebr']
+  packages: ['vjcwebr']
+
+---
+title: "yescds"
+---
+
+```{webr-r}
+library(vjcwebr)
+data(woncan)
+head(woncan)
+```
+
+```{webr-r}
+mass_map()
+```
