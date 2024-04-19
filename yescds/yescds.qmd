@@ -22,7 +22,7 @@ filters:
   - webr
 webr:
   repos: ['https://repo.r-wasm.org', 'https://vjcitn.github.io/vjcwebr']
-  packages: ['vjcwebr']
+  packages: ['vjcwebr', 'dplyr', 'ggplot2']
 
 ---
 title: "yescds"
