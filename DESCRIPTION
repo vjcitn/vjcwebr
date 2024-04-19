@@ -12,8 +12,8 @@ Authors@R:
 Description: demonstrate use of webr
 License: Artistic-2.0
 Encoding: UTF-8
-Depends: R (>= 4.1), dplyr
-Imports: SummarizedExperiment
+Depends: R (>= 4.1)
+Imports: dplyr
 Suggests: knitr
 VignetteBuilder: knitr
 biocViews: Infrastructure

@@ -6,8 +6,8 @@
 #' @param ylim numeric(2) extent of y axis in units of incidence per 100000 
 #' @examples
 #' oldpar = par(no.readonly=TRUE)
-#' prost = read.csv(system.file("csv/MASSProstateWCI.csv", package="YESCDS"))
-#' bre = read.csv(system.file("csv/MABreastWCI.csv", package="YESCDS"))
+#' prost = read.csv(system.file("csv/MASSProstateWCI.csv", package="vjcwebr"))
+#' bre = read.csv(system.file("csv/MABreastWCI.csv", package="vjcwebr"))
 #' par(mfrow=c(1,2))
 #' plotwci(prost, site="Prostate", ylim=c(60,270))
 #' plotwci(bre, site="Breast", ylim=c(60,280))

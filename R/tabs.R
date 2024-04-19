@@ -9,8 +9,8 @@
 #' @export
 MA_cancer_rate_table = function(site="breast", simple=TRUE) {
  stopifnot(site %in% c("breast", "prostate"))
- if (site == "prostate") ans = read.csv(system.file("csv/MASSProstateWCI.csv", package="YESCDS"))
- else ans = read.csv(system.file("csv/MABreastWCI.csv", package="YESCDS"))
+ if (site == "prostate") ans = read.csv(system.file("csv/MASSProstateWCI.csv", package="vjcwebr"))
+ else ans = read.csv(system.file("csv/MABreastWCI.csv", package="vjcwebr"))
  if (simple) ans = ans[, -c(1,5)]
  ans
 }
@@ -18,7 +18,7 @@ MA_cancer_rate_table = function(site="breast", simple=TRUE) {
 #' generate vector of cancer sites in CDC Wonder table
 #' @export
 woncan_types = function() {
-  data("woncan", package="YESCDS")
+  data("woncan", package="vjcwebr")
   sort(unique( woncan$`Cancer Sites`))
 }
 
@@ -36,6 +36,6 @@ filter_woncan = function(site) {
 #' @param site character(1) name of anatomic site, must reside in value of `woncan_types()`
 #' @export
 table_woncan = function(site) {
-  data("woncan", package="YESCDS")
+  data("woncan", package="vjcwebr")
   DT::datatable(filter_woncan(site))
 }
