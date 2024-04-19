@@ -13,7 +13,7 @@ Description: demonstrate use of webr
 License: Artistic-2.0
 Encoding: UTF-8
 Depends: R (>= 4.1)
-Imports: dplyr
+Imports: dplyr, ggplot2, forcats, DT, survival
 Suggests: knitr
 VignetteBuilder: knitr
 biocViews: Infrastructure

@@ -1,9 +1,9 @@
 #' utility for survival curve illustration
+#' @import survival
 #' @export
 build_simple_survival_curve = function() {
 set.seed(1234)
 x = rexp(200, .3/12)
-library(survival)
 sx = Surv(x, rep(1,200))
 plot(survfit(sx~1), lwd=2, ylab="Survival probability", xlab="Months from diagnosis",
    axes=FALSE, xlim=c(0,168), conf.int=FALSE)
@@ -16,7 +16,6 @@ axis(1, at = seq(0,max(x),12L))
 show_median_estimate = function() {
 set.seed(1234)
 x = rexp(200, .3/12)
-library(survival)
 sx = Surv(x, rep(1,200))
 meddat = median(sx)
 plot(survfit(sx~1), lwd=2, ylab="Survival probability", xlab="Months from diagnosis",
@@ -32,7 +31,6 @@ arrows(meddat$quantile, .5, meddat$quantile, 0, lwd=2, col="blue")
 show_5y_estimate = function() {
 set.seed(1234)
 x = rexp(200, .3/12)
-library(survival)
 sx = Surv(x, rep(1,200))
 plot(survfit(sx~1), lwd=2, ylab="Survival probability", xlab="Months from diagnosis",
    axes=FALSE, xlim=c(0,168), conf.int=FALSE)
