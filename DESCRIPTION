@@ -1,7 +1,7 @@
 Package: vjcwebr
 Date: 2022-10-01
 Title: demonstrate use of webr
-Version: 0.0.2
+Version: 0.0.3
 Authors@R: 
     c(person(
         "Vincent", "Carey", role = c("aut", "cre"),
@@ -12,7 +12,7 @@ Authors@R:
 Description: demonstrate use of webr
 License: Artistic-2.0
 Encoding: UTF-8
-Depends: R (>= 4.1), leaflet, htmltools
+Depends: R (>= 4.1), dplyr, ggplot2
 Suggests: knitr
 VignetteBuilder: knitr
 biocViews: Infrastructure
